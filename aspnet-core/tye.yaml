@@ -1,0 +1,38 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: alecsg77.mymoney
+network: alecsg77_mymoney_net
+services:
+- name: authserver
+  project: src/AlecsG77.MyMoney.AuthServer/AlecsG77.MyMoney.AuthServer.csproj
+  bindings:
+    - protocol: https
+      port: 44323
+- name: api
+  project: src/AlecsG77.MyMoney.HttpApi.Host/AlecsG77.MyMoney.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44351
+- name: redis
+  image: redis
+  bindings:
+  - port: 6379
+    connectionString: "${host}:${port}"
+  volumes:
+    - target: /data
+      name: alecsg77_mymoney_redis
+- name: mysql
+  image: mysql
+  bindings:
+  - port: 3306
+    connectionString: "Server=${host};Port=${port};Database=MyMoney;Uid=root;Pwd=${env:MYSQL_ROOT_PASSWORD};"
+  env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: myPassword
+  volumes:
+    - target: /var/lib/mysql
+      name: alecsg77_mymoney_mysql

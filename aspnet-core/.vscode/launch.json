@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "applicationName": "alecsg77.mymoney",
+            "name": "Debug with Tye",
+            "preLaunchTask": "tye-run",
+            "request": "launch",
+            "type": "tye",
+            "watch": true
+        }
+    ]
+}
