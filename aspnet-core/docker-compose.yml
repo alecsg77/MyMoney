@@ -1,0 +1,60 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}alecsg77mymoneyhttpapihost
+    profiles:
+    - backend
+    - api
+    build:
+      context: .
+      dockerfile: src/AlecsG77.MyMoney.HttpApi.Host/Dockerfile
+    depends_on:
+      - identity-server
+      - dbmigrator
+      - mysql
+      - redis
+
+  identity-server:
+    image: ${DOCKER_REGISTRY-}alecsg77mymoneyauthserver
+    profiles:
+    - backend
+    - api
+    build:
+      context: .
+      dockerfile: src/AlecsG77.MyMoney.AuthServer/Dockerfile
+    depends_on:
+      - dbmigrator
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql
+    profiles:
+    - backend
+    - infra
+    - tools
+    volumes:
+    - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis
+    profiles:
+    - backend
+    - infra
+    volumes:
+    - redis_data:/data
+
+  dbmigrator:
+    image: ${DOCKER_REGISTRY-}alecsg77mymoneydbmigrator
+    profiles:
+    - tools
+    build:
+      context: .
+      dockerfile: src/AlecsG77.MyMoney.DbMigrator/Dockerfile
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
+  redis_data:

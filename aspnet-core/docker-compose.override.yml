@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  api:
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ConnectionStrings__Default=Server=mysql;Port=3306;Database=MyMoney;Uid=root;Pwd=myPassword;
+      - Redis__Configuration=redis
+    ports:
+      - "80"
+      - 44351:443
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  
+  identity-server:
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ConnectionStrings__Default=Server=mysql;Port=3306;Database=MyMoney;Uid=root;Pwd=myPassword;
+      - Redis__Configuration=redis
+    ports:
+      - "80"
+      - 44323:443
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  mysql:
+    environment:
+    - MYSQL_ROOT_PASSWORD=myPassword
+    - MYSQL_DATABASE=MyMoney
+    ports:
+      - 3306:3306
+
+  redis:
+    ports:
+    - 6379:6379
+
+  dbmigrator:
+    environment:
+      - ConnectionStrings__Default=Server=mysql;Port=3306;Database=MyMoney;Uid=root;Pwd=myPassword;
