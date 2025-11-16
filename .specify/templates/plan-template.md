@@ -31,7 +31,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Verify compliance with MyMoney Constitution (`.specify/memory/constitution.md`):
+
+- [ ] **I. Security & Privacy by Design**: Does this feature handle sensitive data? If yes, encryption (transit/rest), least privilege, no secrets in repo, PII masking confirmed?
+- [ ] **II. Test-First & Quality Gates**: TDD workflow planned? Tests written before implementation? Contract tests for new APIs?
+- [ ] **III. Observability & Incident Readiness**: Structured logging, metrics, tracing planned? SLOs defined? Incident playbook needed?
+- [ ] **IV. Data Integrity & Auditability**: Financial operations immutable/auditable? Idempotency confirmed? Checksums/hashes for critical data?
+- [ ] **V. Simplicity & Minimum Surface Area**: New dependencies justified? Abstractions deferred until 3+ repetitions? Dead code cleanup planned?
+- [ ] **Performance & Availability**: Load testing to 3× traffic planned? Autoscaling considered? RTO/RPO requirements met?
+
+**Complexity Violations** (if any): Document in Complexity Tracking section below with justification.
 
 ## Project Structure
 
