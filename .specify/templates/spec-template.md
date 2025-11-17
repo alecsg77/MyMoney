@@ -4,6 +4,7 @@
 **Created**: [DATE]  
 **Status**: Draft  
 **Input**: User description: "$ARGUMENTS"
+**Related ADRs**: [Link to Architecture Decision Records in `/docs/adr/` if this feature depends on or is constrained by architectural decisions]
 
 ## User Scenarios & Testing *(mandatory)*
 

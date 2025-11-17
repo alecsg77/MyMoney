@@ -42,6 +42,8 @@ Verify compliance with MyMoney Constitution (`.specify/memory/constitution.md`):
 
 **Complexity Violations** (if any): Document in Complexity Tracking section below with justification.
 
+**Related ADRs**: [Link to any Architecture Decision Records in `/docs/adr/` that constrain or inform this feature design]
+
 ## Project Structure
 
 ### Documentation (this feature)
