@@ -1,0 +1,31 @@
+name: "Copilot Setup Steps"
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - name: Restore
+        run: dotnet restore || echo "No solution yet - skipping restore"
+      - name: Build
+        run: dotnet build --no-restore -c Release || echo "No solution yet - skipping build"
+      - name: Test
+        run: dotnet test --no-build -c Release || echo "No tests yet - skipping"
+      - name: Lint (placeholder)
+        run: echo "Add analyzers (StyleCop/Roslyn) once solution exists"
+      - name: Summary
+        run: echo "Copilot setup workflow executed"
