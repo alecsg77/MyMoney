@@ -1,6 +1,5 @@
-<!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
-mode: "agent"
+agent: "agent"
 description: "Scaffold a new ABP application service or domain aggregate"
 tools: [ ]
 ---

@@ -1,4 +1,3 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md (C# .NET Development & Documentation themes) -->
 ---
 applyTo: "**/*.md,**/*.cs"
 description: "Documentation standards for MyMoney (domain aggregates, application services, architectural decisions)"

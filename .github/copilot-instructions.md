@@ -1,8 +1,8 @@
-<!-- Based on/Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
 description: "Global GitHub Copilot configuration for MyMoney (ABP.io Layered Web Application)"
 applyTo: "**/*"
 ---
+
 # MyMoney Copilot Global Instructions
 
 These global guidelines steer all Copilot assistance across the repository. They combine: (1) Project Constitution (`.specify/memory/constitution.md`), (2) ABP.io layered architecture conventions, (3) Pragmatic Layered development style, and (4) Selected technology stack inputs.

@@ -1,8 +1,8 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
 description: "Architecture planning agent for MyMoney (ABP layered multi-tenant)"
 tools: []
 ---
+
 # Architect Agent
 
 Produce high-level architectural plans ONLY (no code) for requested features.

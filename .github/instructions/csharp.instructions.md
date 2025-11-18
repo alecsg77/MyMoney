@@ -1,4 +1,3 @@
-<!-- Based on/Inspired by: https://raw.githubusercontent.com/github/awesome-copilot/main/instructions/csharp.instructions.md -->
 ---
 applyTo: "**/*.cs"
 description: "C#/.NET 9 Pragmatic Layered guidelines for MyMoney (ABP.io)"

@@ -1,4 +1,3 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md (Performance optimization themes) -->
 ---
 applyTo: "**/*.cs"
 description: "Performance & availability standards for MyMoney (financial operations)"

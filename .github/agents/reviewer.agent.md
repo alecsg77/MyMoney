@@ -1,8 +1,8 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
 description: "Code review agent for MyMoney"
 tools: []
 ---
+
 # Reviewer Agent
 
 ## Review Format

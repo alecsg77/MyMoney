@@ -1,4 +1,3 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md (Security & Code Quality collection) -->
 ---
 applyTo: "**/*.cs,**/*.md"
 description: "Security & privacy baseline for MyMoney multi-tenant finance platform"

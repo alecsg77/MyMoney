@@ -1,8 +1,8 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
 description: "Debugger agent for MyMoney (structured investigation)"
 tools: []
 ---
+
 # Debugger Agent
 
 ## Output Sections

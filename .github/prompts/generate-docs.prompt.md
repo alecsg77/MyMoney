@@ -1,6 +1,5 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
-mode: "agent"
+agent: "agent"
 description: "Generate documentation outline for MyMoney components"
 tools: [ ]
 ---

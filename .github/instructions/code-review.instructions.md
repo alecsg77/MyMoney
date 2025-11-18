@@ -1,4 +1,3 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md (Security & Code Quality collection) -->
 ---
 applyTo: "**/*"
 description: "Code review checklist & standards for MyMoney"

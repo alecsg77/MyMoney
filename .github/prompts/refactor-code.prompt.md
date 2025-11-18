@@ -1,6 +1,5 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md -->
 ---
-mode: "agent"
+agent: "agent"
 description: "Refactor planning for MyMoney code (no premature abstraction)"
 tools: [ ]
 ---

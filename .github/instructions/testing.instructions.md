@@ -1,4 +1,3 @@
-<!-- Inspired by: https://github.com/github/awesome-copilot/blob/main/docs/README.collections.md (Testing & Test Automation collection) -->
 ---
 applyTo: "**/*.cs"
 description: "Testing standards: xUnit + FluentAssertions + Testcontainers for MyMoney"
